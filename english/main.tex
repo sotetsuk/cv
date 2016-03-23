@@ -76,7 +76,7 @@
 \newcommand{\EducationEntry}[4]{
 		\noindent \textbf{#1} \hfill      % Study
 		\colorbox{Black}{%
-			\parbox{6em}{%
+			\parbox{10em}{%
 			\hfill\color{White}#2}} \par  % Duration
 		\noindent \textit{#3} \par        % School
 		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
@@ -98,8 +98,8 @@
 %		\includegraphics[width=0.15\textwidth]{photo}
 %\end{wrapfigure}
 
-\MyName{Your Name}
-\MySlogan{Curriculum Vitae}
+\MyName{Sotetsu KOYAMADA}
+% \MySlogan{Curriculum Vitae}
 
 \sepspace
 
@@ -107,43 +107,70 @@
 %%% ------------------------------------------------------------
 \NewPart{Personal details}{}
 
-\PersonalEntry{Birth}{January 1, 1980}
-\PersonalEntry{Address}{111 First St, New York}
-\PersonalEntry{Phone}{(123) 000-0000}
-\PersonalEntry{Mail}{\url{me@home.com}}
+% \PersonalEntry{Birth}{January 1, 1980}
+\PersonalEntry{Contact}{Ishii-lab.}
+\PersonalEntry{}{Graduate School of Informatics, Kyoto University}
+\PersonalEntry{}{Yoshidahonmachi 36-1, sakyo-ku, Kyoto-city, Japan. 606-8501}
+% \PersonalEntry{Phone}{(123) 000-0000}
+\PersonalEntry{Mail}{\url{koyamada-s@sys.i.kyoto-u.ac.jp}}
+\PersonalEntry{Web}{\url{http://sotetsuk.net}}
 
 %%% Education
 %%% ------------------------------------------------------------
 \NewPart{Education}{}
 
-\EducationEntry{MSc. Name of Education}{2010-2012}{Name of
-  University}{Descriptive text goes here. In order to maintain a stylish look, try to fill this description with a few lines of text. Do the same for the other entries in the education section.}
+\EducationEntry{Ph.D. student of Informatics}{Apr 2015 - present}{Kyoto University}{Supervisor: Shin Ishii}
 \sepspace
 
-\EducationEntry{BSc. Name of Education}{2007-2010}{Name of University}{Descriptive text goes here. In order to maintain a stylish look, try to fill this description with a few lines of text. Do the same for the other entries in the education section.}
+\EducationEntry{Master of Informatics}{Apr 2013 - Mar 2015}{Kyoto University}{Supervisor: Shin Ishii\\
+Master thesis: Principal Sensitivity Analysis and Its Application to Knowledge Discovery in Functional Neuroimaging
+}
+\sepspace
+
+\EducationEntry{Bachelor of Economics}{Apr 2008 - Mar 2013}{Kyoto University}{Supervisor: Masaaki Iiyama}
 
 %%% Work experience
 %%% ------------------------------------------------------------
 \NewPart{Work experience}{}
 
-\EducationEntry{Job name}{2011-present}{Company Name inc., Full-time}{Job description goes here. To maintain a stylish look, try to fill this description with a few lines of text. Do the same for the other entries in this section.}
+\EducationEntry{Data mining engineer}{Apr 2015 - present}{Recruit Holdings Co., Ltd., Japan., Full-time}%{}
 \sepspace
 
-\EducationEntry{Job name}{2010-2011}{Company Name inc., Part-time}{Job description goes here. To maintain a stylish look, try to fill this description with a few lines of text. Do the same for the other entries in this section.}
+\EducationEntry{Research Internship}{Oct 2013 - Mar 2015}{ATR Cognitive Mechanisms Laboratories, Japan., Part-time}%{}
 
 %%% Skills
 %%% ------------------------------------------------------------
 \NewPart{Skills}{}
 
-\SkillsEntry{Languages}{Dutch (mother tongue)}
-\SkillsEntry{}{English (fluent)}
-\SkillsEntry{}{German (fluent)}
+% \SkillsEntry{Languages}{Dutch (mother tongue)}
+% \SkillsEntry{}{English (fluent)}
+% \SkillsEntry{}{German (fluent)}
 
-\SkillsEntry{Software}{\textsc{Matlab}, \LaTeX, \textsc{Ansys}, \textsc{Comsol}}
+\SkillsEntry{Software}{Python, Go, Scala, C++, Java, SQL, Hadoop, Spark}
 
 
 %%% References
 %%% ------------------------------------------------------------
-\NewPart{References}{}
-Available upon request
+% \NewPart{References}{}
+% Available upon request
+
+%%% References
+%%% ------------------------------------------------------------
+\NewPart{Research}{}
+\textbf{Conference (refereed)}
+
+\begin{enumerate}
+ \item S. Koyamada, M. Koyama, K. Nakae, and S. Ishii: "Principal sensitivity analysis." In Proceedings of the Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD), 621-632, 2015. 
+ \item S. Koyamada, Y. Shikauchi, K. Nakae, and S. Ishii: "Construction of subject-independent brain becoders for human fMRI with deep learning." The International Conference on Data Mining, Internet Computing, and Big Data, 60-68, 2014.
+\end{enumerate}
+
+\textbf{Conference, workshop and other Events (not refereed)}
+
+\begin{enumerate}
+ \item S. Koyamada: "Principal Sensitivity Analysis." Machine Learning Summer School 2015 Kyoto, Kyoto, 2015.9.1. (poster presentation)
+ \item S. Koyamada, Y. Shikauchi, K. Nakae, M. Koyama, and S. Ishii: "Knowledge Discovery for Nonliner Classifier in Functional Neuroimaging." 10th AEARU Workshop on Computer Science and Web Technology, Tsukuba, 2015.2.26. (poseter presentation)
+ \item S. Koyamada, Y. Shikauchi, K. Nakae, and S. Ishii: "Learning the subject-independent discriminative features from the largr-scale fMRI database." Neuro2014, Yokohama, 2014.9.13. (poseter presentation)
+\end{enumerate}
+
 \end{document}
+
