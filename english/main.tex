@@ -1,234 +1,140 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% LaTeX Template: Curriculum Vitae
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Graduate Curriculum Vitae
+% LaTeX Template
+% Version 1.1 (9/12/12)
 %
-% Source: http://www.howtotex.com/
-% Feel free to distribute this template, but please keep the
-% referal to HowToTeX.com.
-% Date: July 2011
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% How to use writeLaTeX:
+% Original author:
+% Rensselaer Polytechnic Institute (http://www.rpi.edu/dept/arc/training/latex/resumes/)
 %
-% You edit the source code here on the left, and the preview on the
-% right shows you the result within a few seconds.
+% Important note:
+% This template requires the res.cls file to be in the same directory as the
+% .tex file. The res.cls file provides the resume style used for structuring the
+% document.
 %
-% Bookmark this page and share the URL with your co-authors. They can
-% edit at the same time!
-%
-% You can upload figures, bibliographies, custom classes and
-% styles using the files menu.
-%
-% If you're new to LaTeX, the wikibook is a great place to start:
-% http://en.wikibooks.org/wiki/LaTeX
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[paper=a4,fontsize=11pt]{scrartcl} % KOMA-article class
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage[english]{babel}
-\usepackage[utf8x]{inputenc}
-\usepackage[protrusion=true,expansion=true]{microtype}
-\usepackage{amsmath,amsfonts,amsthm}     % Math packages
-\usepackage{graphicx}                    % Enable pdflatex
-\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
-\usepackage{geometry}
-	\textheight=700px                    % Saving trees ;-)
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[margin, 10pt]{res} % Use the res.cls style, the font size can be changed to 11pt or 12pt here
+
+\usepackage{helvet} % Default font is the helvetica postscript font
+%\usepackage{newcent} % To change the default font to the new century schoolbook postscript font uncomment this line and comment the one above
+
+\setlength{\textwidth}{5.1in} % Text width of the document
 \usepackage{url}
 
-\frenchspacing              % Better looking spacings after periods
-\pagestyle{empty}           % No pagenumbers/headers/footers
-
-%%% Custom sectioning (sectsty package)
-%%% ------------------------------------------------------------
-\usepackage{sectsty}
-
-\sectionfont{%			            % Change font of \section command
-	\usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
-	\sectionrule{0pt}{0pt}{-5pt}{3pt}}
-
-%%% Macros
-%%% ------------------------------------------------------------
-\newlength{\spacebox}
-\settowidth{\spacebox}{8888888888}			% Box to align text
-\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
-
-\newcommand{\MyName}[1]{ % Name
-		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1
-		\par \normalsize \normalfont}
-
-\newcommand{\MySlogan}[1]{ % Slogan (optional)
-		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
-		\par \normalsize \normalfont}
-
-\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
-
-\newcommand{\PersonalEntry}[2]{
-		\noindent\hangindent=2em\hangafter=0 % Indentation
-		\parbox{\spacebox}{        % Box to align text
-		\textit{#1}}		       % Entry name (birth, address, etc.)
-		\hspace{1.5em} #2 \par}    % Entry value
-
-\newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
-		\noindent\hangindent=2em\hangafter=0 % Indentation
-		\parbox{\spacebox}{        % Box to align text
-		\textit{#1}}			   % Entry name (birth, address, etc.)
-		\hspace{1.5em} #2 \par}    % Entry value
-
-\newcommand{\EducationEntry}[4]{
-		\noindent \textbf{#1} \hfill      % Study
-		\colorbox{Black}{%
-			\parbox{10em}{%
-			\hfill\color{White}#2}} \par  % Duration
-		\noindent \textit{#3} \par        % School
-		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
-		\normalsize \par}
-
-\newcommand{\WorkEntry}[4]{				  % Same as \EducationEntry
-		\noindent \textbf{#1} \hfill      % Jobname
-		\colorbox{Black}{\color{White}#2} \par  % Duration
-		\noindent \textit{#3} \par              % Company
-		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
-		\normalsize \par}
-
-%%% Begin Document
-%%% ------------------------------------------------------------
 \begin{document}
-% you can upload a photo and include it here...
-%\begin{wrapfigure}{l}{0.5\textwidth}
-%	\vspace*{-2em}
-%		\includegraphics[width=0.15\textwidth]{photo}
-%\end{wrapfigure}
 
-\MyName{Sotetsu KOYAMADA}
-% \MySlogan{Curriculum Vitae}
+%----------------------------------------------------------------------------------------
+%	NAME AND ADDRESS SECTION
+%----------------------------------------------------------------------------------------
 
-\sepspace
+\moveleft.5\hoffset\centerline{\large\bf Sotetsu Koyamada} % Your name at the top
+ 
+\moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip % Horizontal line after name; adjust line thickness by changing the '1pt'
+ 
+\moveleft.5\hoffset\centerline{Graduate School of Informatics, Kyoto University} % Your address
+\moveleft.5\hoffset\centerline{Yoshidahonmachi 36-1, sakyo-ku, Kyoto-city, Kyoto, Japan. 606-8501}
+\moveleft.5\hoffset\centerline{\url{koyamada-s@sys.i.kyoto-u.ac.jp}}
+\moveleft.5\hoffset\centerline{\url{https://sotets.uk}}
 
-%%% Personal details
-%%% ------------------------------------------------------------
-\NewPart{Personal details}{}
+%----------------------------------------------------------------------------------------
 
-% \PersonalEntry{Birth}{January 1, 1980}
-\PersonalEntry{Contact}{Ishii-lab.}
-\PersonalEntry{}{Graduate School of Informatics, Kyoto University}
-\PersonalEntry{}{Yoshidahonmachi 36-1, sakyo-ku, Kyoto-city, Kyoto, Japan. 606-8501}
-% \PersonalEntry{Phone}{(123) 000-0000}
-\PersonalEntry{Mail}{\url{koyamada-s@sys.i.kyoto-u.ac.jp}}
-\PersonalEntry{Web}{\url{https://sotets.uk}}
+\begin{resume}
 
-%%% Summary
-%%%% ------------------------------------------------------------
-\NewPart{Sumamry}{}
+\section{{\small RESEARCH\\INTERESTS}}
 
-Machine learning engineer
-having deep knowledge of computer science and
-experience of developing machine learning application.
-Well-experienced in not only building predictive models and API
-but also solving business problems of IT company (from finding business issues to implementing the solutions).
-For research interests and skills, see the followings.
+My primary research interest is reinforcement learning, and I am particularly interested in both theoretical and practical interface between its algorithms and other fields of machine learning. I am also interested in neural networks, natural language processing, and sensitivity analysis in general as well.
 
-\subsection*{Research interests}
-Engaged in machine learning research:
+\section{{\small EDUCATION}}
 
-\begin{enumerate}
-  \item {\bf Model explanation}: Develop algorithms to explain the reasons behind the predictions by models, in order to apply machine learning models to real world problems (e.g., medical diagnosis).
-	\item {\bf Reinforcement Learning}: Interested in algorithms to learn the actions from rewards given by enviroments. Involved in Japanese translation of reinforcement learning book.
-\end{enumerate}
+{\sl {\bf Ph.D. candidate of Informatics}} \hfill {\small \underline{Apr 2015 - Present}} \\
+{\it Kyoto University} \\
+Supervisor: Shin Ishii
 
-%%% Work experience
-%%% ------------------------------------------------------------
-\NewPart{Work experience}{}
+{\sl {\bf Master of Informatics}} \hfill {\small \underline{Apr 2013 - Mar 2015}}  \\
+{\it Kyoto University} \\
+Supervisor: Shin Ishii \\
+Thesis title: ``Principal Sensitivity Analysis and Its Application to Knowledge Discovery in Functional Neuroimaging''
 
-\EducationEntry{Machine learning engineer}{Apr 2015 - present}{Recruit Holdings Co., Ltd., Japan., Full-time}{
-Machine learning engineer responsible for developing predictive API to improve KPI performance (website's CVR and so on).
-Involved in constructing ETL flow and predictive models on Hadoop clusters using Python and Spark.
-}
-\sepspace
+{\sl {\bf Bachelor of Economics}} \hfill {\small \underline{Apr 2008 - Mar 2013}} \\
+{\it Kyoto University} \\
+Supervisor: Masaaki Iiyama
+  
+\section{{\small PROFESSIONAL\\EXPERIENCE}}
 
-\EducationEntry{Research Internship}{Oct 2013 - Mar 2015}{ATR Cognitive Mechanisms Laboratories, Japan., Part-time}{
-Brain decoding reserach (brain decoding is an act of decoding exogenous and/or endogenous brain
-states from measurable brain activities). Especially, involved in developing individual-independent decoders and
-new algorithms for data-driven scientific disocovery from individual-independent decoders.
-}
+{\sl {\bf Research internship}} \hfill {\small \underline{Aug 2016 - Present}} \\
+{\it National Institute of Advanced Industrial Science and Technology, Japan} \\
+Developed a new training objective function for neural sequence prediction, which generalizes the maximum likelihood-based and reinforcement learning-based objective functions using $\alpha$-divergence.
 
-%%% Education
-%%% ------------------------------------------------------------
-\NewPart{Education}{}
+{\sl {\bf Machine learning engineer}} \hfill {\small \underline{Apr 2015 - Present}}\\
+{\it Recruit Holdings Co., Ltd., Japan} \\
+Constructed predictive APIs on Hadoop and Spark platform to improve KPI (key performance indicator) performances for more than 30 web services.
 
-\EducationEntry{Ph.D. student of Informatics}{Apr 2015 - present}{Kyoto University}{Supervisor: Shin Ishii}
-\sepspace
+{\sl {\bf Research internship}} \hfill {\small \underline{Oct 2013 - Mar 2015}} \\
+{\it ATR Cognitive Mechanisms Laboratories, Japan}  \\
+Developed a subject-independent brain decoder using neural networks and proposed a new algorithm for data-driven scientific discovery from nonlinear classifiers.
 
-\EducationEntry{Master of Informatics}{Apr 2013 - Mar 2015}{Kyoto University}{Supervisor: Shin Ishii\\
-Master thesis: Principal Sensitivity Analysis and Its Application to Knowledge Discovery in Functional Neuroimaging
-}
-\sepspace
+\section{{\small RESEARCH} }
+{\sl {\bf Books}} \vspace{0.5em}
+\begin{itemize}
+\item {\bf S. Koyamada} et al.: Japanese translation of ``Algorithms for Reinforcement Learning'' by C. Szepesv{\'a}ri, Kyoritsu Shuppan.
+  \begin{itemize}
+  \item Chief editor. Managed the entire project ran by 12 team members.
+  \item Wrote an additional chapter about deep reinforcement learning.
+  \end{itemize}
+\end{itemize}
 
-\EducationEntry{Bachelor of Economics}{Apr 2008 - Mar 2013}{Kyoto University}{Supervisor: Masaaki Iiyama}
+{\sl {\bf Publications (refereed)}} \vspace{0.5em}
+\begin{itemize}
+\item {\bf S. Koyamada}, Y. Kikuchi, A. Kanemura, S. Maeda, and S. Ishii: ``Neural sequence model training via $\alpha$-divergence minimization.'' ICML Workshop on Learning to Generate Natural Language, 2017.
+\item {\bf S. Koyamada}, M. Koyama, K. Nakae, and S. Ishii: ``Principal sensitivity analysis.'' In Proceedings of the Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD), 621-632, 2015.
+\item {\bf S. Koyamada}, Y. Shikauchi, K. Nakae, and S. Ishii: ``Construction of subject independent brain decoders for human fMRI with deep learning.'' The International Conference on Data Mining, Internet Computing, and Big Data, 60-68, 2014.
+\end{itemize}
 
-%%% Personal projects
-%%% ------------------------------------------------------------
-\NewPart{Personal projects}{}
+{\sl {\bf Pre-prints (not refereed)}} \vspace{0.5em}
+\begin{itemize}
+\item {\bf S. Koyamada}, Y. Shikauchi, K. Nakae, M. Koyama, S. Ishii ``Deep learning of fMRI big data: a novel approach to subject-transfer decoding.'' arXiv:1502.00093, 2015.
+\end{itemize}
 
-\EducationEntry{Japanese translation of technical book}{Oct 2015 - Present}{Project manager}{
-Engaged in Japanese translation of a reinforcement learning book ({\em ``Algorithms for Reinforcement Learning.''} Szepesv\'ari 2010).
-Responsibilities include managing project, negociating with publishers (in Japan), and translating.
-This project is on going and you can check the progress on GitHub repository (\url{https://github.com/sotetsuk/algo-rl-ja}).
-}
+{\sl {\bf Other presentations (not refereed)}} \vspace{0.5em}
+\begin{itemize}
+\item {\bf S. Koyamada}: ``Principal Sensitivity Analysis.'' Machine Learning Summer School 2015 Kyoto, Kyoto, Sep 1, 2015 (poster presentation)
+\item {\bf S. Koyamada}, Y. Shikauchi, K. Nakae, M. Koyama, and S. Ishii: ``Knowledge Discovery for Nonlinear Classifier in Functional Neuroimaging.'' 10th AEARU Workshop on Computer Science and Web Technology, Tsukuba, Feb 26, 2015 (poster presentation)
+\item {\bf S. Koyamada}, Y. Shikauchi, K. Nakae, and S. Ishii: ``Learning the subject-independent discriminative features from the large-scale fMRI database.'' Neuro2014, Yokohama, Sep 13, 2014 (poster presentation)
+\end{itemize}
 
-%%% References
-%%% ------------------------------------------------------------
-% \NewPart{References}{}
-% Available upon request
+\section{{\small GRANTS AND\\SCHOLARSHIPS}}
+{\sl {\bf Student Scholarship}} \hfill {\small \underline{Apr 2013 - Mar 2015}} \\
+Japan Student Services Organization (JASSO), Japan \\
+Approx. 1,056,000 yen
 
-%%% References
-%%% ------------------------------------------------------------
-\NewPart{Research}{}
+\section{{\small TEACHING}}
+{\sl {\bf Teaching assistant}} \hfill {\small \underline{Jul 23, 2014}} \\
+Lecture sessions on deep learning, Kyoto University, Japan
 
-\subsection*{Conference Papers (refereed)}
+{\sl {\bf Teaching assistant}} \hfill {\small \underline{Oct 2013 - Mar 2014}} \\
+``Introduction to Computer Science.'' Kyoto University, Japan
 
-\begin{enumerate}
- \item S. Koyamada, M. Koyama, K. Nakae, and S. Ishii: {\em ``Principal sensitivity analysis.''} In Proceedings of the Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD), 621-632, 2015.
- \item S. Koyamada, Y. Shikauchi, K. Nakae, and S. Ishii: {\em ``Construction of subject-independent brain becoders for human fMRI with deep learning.''} The International Conference on Data Mining, Internet Computing, and Big Data, 60-68, 2014.
-\end{enumerate}
+\section{{\small SKILLS}}
+{\sl {\bf Programming skills}} \vspace{0.5em}
+\begin{itemize}
+\item Programming language: Python, Go, C++, Java, R
+  \begin{itemize}
+  \item GitHub repo: https://github.com/sotetsuk
+  \end{itemize}
+\item Deep learning framework: PyTorch, Chainer, TensorFlow
+\item Middleware/Infrastructure: Hadoop, Spark, RDBMS, AWS, GCP, Docker
+\item Other tools: Git, SQL, LaTeX
+\end{itemize}
 
-\subsection*{ArXiv Papers (not refereed)}
-\begin{enumerate}
-\item S. Koyamada, Y. Shikauchi, K. Nakae, M. Koyama, S. Ishii {\em ``Deep learning of fMRI big data: a novel approach to subject-transfer decoding.''} arXiv:1502.00093
-\end{enumerate}
+{\sl {\bf Language}}\\
+Japanese (native), English
 
-\subsection*{Conference, workshop and other Events (not refereed)}
-
-\begin{enumerate}
- \item S. Koyamada: {\em ``Principal Sensitivity Analysis.''} Machine Learning Summer School 2015 Kyoto, Kyoto, 2015.9.1. (poster presentation)
- \item S. Koyamada, Y. Shikauchi, K. Nakae, M. Koyama, and S. Ishii: {\em ``Knowledge Discovery for Nonliner Classifier in Functional Neuroimaging.''} 10th AEARU Workshop on Computer Science and Web Technology, Tsukuba, 2015.2.26. (poseter presentation)
- \item S. Koyamada, Y. Shikauchi, K. Nakae, and S. Ishii: {\em ``Learning the subject-independent discriminative features from the largr-scale fMRI database.''} Neuro2014, Yokohama, 2014.9.13. (poseter presentation)
-\end{enumerate}
-
-%%% Skills
-%%% ------------------------------------------------------------
-\NewPart{Skills}{}
-Develop software with {\bf Python} and {\bf Go} usually and have experience of developing application using {\bf Spark}.
-For more details, see my GitHub Repositories (\url{https://github.com/sotetsuk})
-\sepspace
-
-% \SkillsEntry{Languages}{Dutch (mother tongue)}
-% \SkillsEntry{}{English (fluent)}
-% \SkillsEntry{}{German (fluent)}
-
-\SkillsEntry{Programming}{Python, Go, Scala, Java, C++, R, JavaScript(ES6)}
-\SkillsEntry{Middleware}{Haddoop, Spark, RDBMS}
-\SkillsEntry{Other tools}{Git, LaTeX, SQL}
-\SkillsEntry{Language}{Japanese, English}
-
-%%% Certificates
-%%% ------------------------------------------------------------
-\NewPart{Certificates}{}
-
-\begin{enumerate}
-        \item Jul 2016, {\em ``Functional Programming Principles in Scala.''} Coursera Verified Certificates \\{\footnotesize (\url{https://www.coursera.org/account/accomplishments/certificate/AJCTJNQJWNTV})}
-	\item Jul 2016, {\em ``Cloudera Developer Training for Apache Spark.''} Cloudera, Inc. \\{\footnotesize (\url{http://sotetsuk.net/images/cloudera-spark-training-sotetsu-koyamada.pdf})}
-        \item Jul 2016, {\em ``Google Cloud Platform Qualified Data Analyst.''} Google Cloud Platform Qualification Training  \\{\footnotesize (\url{https://sotets.uk/images/google-cloud-platform-qualification-certificate-sotetsu-koyamada.pdf})}
-	\item Oct 2015, {\em ``Introduction to Big Data.''} Coursera Verified Certificates \\{\footnotesize (\url{https://www.coursera.org/account/accomplishments/certificate/27X8ZL5GW254})}
-	\item Nov 2015, {\em ``Hadoop Platform and Application Framework.''} Coursera Course Certificates \\{\footnotesize (\url{https://www.coursera.org/account/accomplishments/certificate/FMLB9W22Q23T})}
-\end{enumerate}
-
+\end{resume}
 \end{document}
